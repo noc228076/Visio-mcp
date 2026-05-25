@@ -1,4 +1,4 @@
-# Visio MCP Server
+# Visio MCP
 
 本项目是一个本地 MCP 服务，通过 Windows COM 自动化操控 Microsoft Visio 绘制流程图。它使用 stdio 传输，适合接入 Codex、Claude Desktop 或其他支持 MCP 的本地客户端。
 
