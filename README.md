@@ -20,7 +20,8 @@
 ## 安装
 
 ```powershell
-cd D:\APPS\AIMCP\visio-mcp-server
+git clone https://github.com/noc228076/visio-mcp-server.git
+cd visio-mcp-server
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -e .
@@ -40,12 +41,12 @@ python -m visio_mcp_server.server
 
 ## ccswitch 配置示例
 
-把下面的配置加入 ccswitch，并按实际 Python 路径调整 `command`：
+把下面这段 JSON 配置加入 ccswitch，并把 `command` 中的 `<repo-path>` 替换为你本机克隆后的项目路径：
 
 ```json
 {
   "type": "stdio",
-  "command": "D:\\APPS\\AIMCP\\visio-mcp-server\\.venv\\Scripts\\python.exe",
+  "command": "<repo-path>\\.venv\\Scripts\\python.exe",
   "args": [
     "-m",
     "visio_mcp_server.server"
